@@ -209,8 +209,8 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     printf("\nAtributo: Área: \n");
 
-    printf("Carta 1 (%s): %.2f km²\n", cidade1, area1);
-    printf("Carta 2 (%s): %.2f km²\n", cidade2, area2);
+    printf("Carta 1 (%s): %.2f km² \n", cidade1, area1);
+    printf("Carta 2 (%s): %.2f km² \n", cidade2, area2);
        
     if ( resultadoArea) {
         printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
@@ -218,25 +218,25 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         printf("Resultado Carta 2 (%s) venceu!!\n", cidade2);
     }
 
-    printf(" \nAtributo: PIB:\n");
+    printf("\nAtributo: PIB:\n");
 
     printf("Carta1 (%s): R$ %.2f\n", cidade1, pib1);
     printf("Carta2 (%s): R$ %.2f\n", cidade2, pib2);
 
-    if (resultadoPib)
-    {
+    if (resultadoPib){
+
       printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
     } else { 
       printf("Resultado: Carta 2 (%S) venceu!!\n", cidade2);
-            }
+    }
 
     printf("\nAtributo: Pontos Turísticos:\n");
 
     printf("Carta 1 (%s): %d\n", cidade1, pontosturisticos1);
     printf("Carta 2 (%s): %d\n", cidade2, pontosturisticos2);
 
-    if (resultadoPontosTuristicos)
-    {
+    if (resultadoPontosTuristicos) {
+
       printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
     } else {
       printf("Resultado: Carta 2 (%s) venceu!!\n", cidade2);
@@ -250,9 +250,9 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     if (resultadoDensidadePopulacional)
     {
       printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
-    }else
+    }else {
       printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
-
+    }
 
       print("\nAtributo: PIB per capita:\n");
       
@@ -262,8 +262,10 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     if (resultadoPibPercapita)
     {
       printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
-    }else
-      printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }else {
+
+     printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }
 
 
       print("\nAtributo: Super Poder:\n");
@@ -274,10 +276,9 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     if (resultadoSuperPoder)
     {
       printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
-    }else
+    }else {
       printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
      }
     
-        return 0; // Fim do programa, indicando que o programa terminou com sucesso.
-    
+      return 0; // Fim do programa, indicando que o programa terminou com sucesso.
     }
