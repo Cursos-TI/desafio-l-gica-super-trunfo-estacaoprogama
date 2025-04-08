@@ -135,7 +135,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     resultadoPontosTuristicos = pontosturisticos2 > pontosturisticos2;
 
-    resultadoDensidadePopulacional = DensidadePopulacional1 > DensidadePopulacional2;
+    resultadoDensidadePopulacional = DensidadePopulacional1 < DensidadePopulacional2;
 
     resultadoPibPercapita = PibPercapta1 > PibPercapta2;
 
@@ -196,24 +196,88 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     printf("\nComparação das Cartas\n");
 
-    // Se o resutado for "1", venceu a carta 1, mas se o resultado for "0", venceu a carta 2.
-
-    printf("\nPopulação: %d\n", resultadoPopulacao);
-    printf("Área: %d\n", resultadoArea );
-    printf("PIB: %d\n", resultadoPib);
-    printf("Pontos Turísticos: %d\n", resultadoPontosTuristicos);
-    printf("Densidade Populacional: %d\n", resultadoDensidadePopulacional);
-    printf("PIB per capita: %d\n", resultadoPibPercapita);
-    printf("Super Poder: %d\n", resultadoSuperPoder); 
-
-    if ( area1 > area2) {
-        printf("Carta 1 venceu!");
+    printf("\nAtributo: População: \n");
+    
+      printf("Carta 1 (%s): %lu \n", cidade1, populacao1);
+      printf("Carta 2 (%s): %lu \n", cidade2, populacao2);
+    
+      if ( resultadoPopulacao) {
+        printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
     } else { 
-        printf("Carta 2 venceu!");
+        printf("Resultado: Carta 2 (%s) venceu!!\n", cidade2);
     }
 
+    printf("\nAtributo: Área: \n");
 
-    return 0; // Fim do programa, indicando que o programa terminou com sucesso.
+    printf("Carta 1 (%s): %.2f km²\n", cidade1, area1);
+    printf("Carta 2 (%s): %.2f km²\n", cidade2, area2);
+       
+    if ( resultadoArea) {
+        printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
+    } else { 
+        printf("Resultado Carta 2 (%s) venceu!!\n", cidade2);
+    }
+
+    printf(" \nAtributo: PIB:\n");
+
+    printf("Carta1 (%s): R$ %.2f\n", cidade1, pib1);
+    printf("Carta2 (%s): R$ %.2f\n", cidade2, pib2);
+
+    if (resultadoPib)
+    {
+      printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
+    } else { 
+      printf("Resultado: Carta 2 (%S) venceu!!\n", cidade2);
+            }
+
+    printf("\nAtributo: Pontos Turísticos:\n");
+
+    printf("Carta 1 (%s): %d\n", cidade1, pontosturisticos1);
+    printf("Carta 2 (%s): %d\n", cidade2, pontosturisticos2);
+
+    if (resultadoPontosTuristicos)
+    {
+      printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
+    } else {
+      printf("Resultado: Carta 2 (%s) venceu!!\n", cidade2);
+    }
+
+    printf("\nAtributo: Densidade Populacional:\n");
+
+    printf("carta 1 (%s): %.2f\n", cidade1, DensidadePopulacional1);
+    printf("Carta 2 (%s): %.2f\n", cidade2, DensidadePopulacional2);
+
+    if (resultadoDensidadePopulacional)
+    {
+      printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    }else
+      printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+
+
+      print("\nAtributo: PIB per capita:\n");
+      
+    printf("carta 1 (%s): R$ %.2f\n", cidade1, PibPercapta1);
+    printf("Carta 2 (%s): R$ %.2f\n", cidade2, PibPercapta2);
+
+    if (resultadoPibPercapita)
+    {
+      printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    }else
+      printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+
+
+      print("\nAtributo: Super Poder:\n");
+      
+    printf("carta 1 (%s): %lu\n", cidade1, superPoderCarta1);
+    printf("Carta 2 (%s): %lu\n", cidade2, superPoderCarta2);
+
+    if (resultadoSuperPoder)
+    {
+      printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    }else
+      printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+     }
     
-
-}
+        return 0; // Fim do programa, indicando que o programa terminou com sucesso.
+    
+    }
