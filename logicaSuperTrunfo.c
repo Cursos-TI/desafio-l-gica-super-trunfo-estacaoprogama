@@ -227,7 +227,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
       printf("Resultado: Carta 1 (%s) venceu!!\n", cidade1);
     } else { 
-      printf("Resultado: Carta 2 (%S) venceu!!\n", cidade2);
+      printf("Resultado: Carta 2 (%s) venceu!!\n", cidade2);
     }
 
     printf("\nAtributo: Pontos Turísticos:\n");
@@ -254,7 +254,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
     }
 
-      print("\nAtributo: PIB per capita:\n");
+      printf("\nAtributo: PIB per capita:\n");
       
     printf("carta 1 (%s): R$ %.2f\n", cidade1, PibPercapta1);
     printf("Carta 2 (%s): R$ %.2f\n", cidade2, PibPercapta2);
@@ -268,10 +268,10 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     }
 
 
-      print("\nAtributo: Super Poder:\n");
+      printf("\nAtributo: Super Poder:\n");
       
-    printf("carta 1 (%s): %lu\n", cidade1, superPoderCarta1);
-    printf("Carta 2 (%s): %lu\n", cidade2, superPoderCarta2);
+    printf("carta 1 (%s): %f\n", cidade1, superPoderCarta1);
+    printf("Carta 2 (%s): %f\n", cidade2, superPoderCarta2);
 
     if (resultadoSuperPoder)
     {
