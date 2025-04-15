@@ -2,34 +2,86 @@
 
 int main() {  // função principal, necessária para iniciar a execução do programa
 
-    char estado1;   // Declara uma variável de caractere chamada "estado1", para armazenar a identificação de um estado. 
-    char estado2;   // Declara uma variável de caractere chamada "estado2"  armazenar a identificação de um estado.
-    char codigocarta1[4]; // Declara uma variável de caractere chamada "codigocarta1" com 4 caracteres para armazenar a identificação do código de uma carta.
-    char codigocarta2[4]; // Declara uma variável de caractere chamada "codigocarta2" com 4 caracteres para armazenar a identificação do código de uma carta.
-    char cidade1[20];  // Declara uma variável de caractere chamada "cidade1" com 20 caracteres para armazenar a identificação de uma cidade.
-    char cidade2[20];  // Declara uma variável de caractere chamada "cidade2" com 20 caracteres para armazenar a identificação de uma cidade.
-    float superPoderCarta1, superPoderCarta2;  // delcara uma variável tipo float chamada "superPoder" para armazenar a soma dos atributos das cartas.;
-    
+    char pais1 = "Brasil";
+    char pais2 = "Argentina";
+   
     /* Declara 4 variáveis inteiras chamada: "populacao1", "populacao2", "pontosturisticos1", "pontosturisticos2", respectivamente para a identificação
-    de população e pontos turísticos com números inteiros.
+    de população e pontos turísticos com números inteiros. */
     
-    Aumenta a capacidade de armazenmento da variável população1 e população2 */
-
-    unsigned long int populacao1, populacao2;
+    int populacao1 = 970000000;
     
-    int pontosturisticos1, pontosturisticos2;
+    int populacao2 = 450000000;
+    
+    int pontosturisticos1 = 250; 
+    int pontosturisticos2 = 175;
 
      // Declara 4 variáveis de ponto flutuante chamadas "area1", "area2", "pib1", "pib2" para a identificação da área e do PIB respectivamente, com números decimais.
 
-    float area1, area2, pib1, pib2; 
+    float area1 = 850000
+    float area2 = 475000;
+    float pib1 = 850000000.00;
+    float pib2 = 950000000.00; 
 
     // Declara variavel para cálculo da densidade populacional.
 
     float DensidadePopulacional1, DensidadePopulacional2;
+    int pais;
+    int atributo;
+        // Delcara variáveis de comparação de atributos das cartas.
 
-    // Declara variável para cálculo do PIB per Capita.
+        int resultadoPopulacao;
+        int resultadoArea;
+        int resultadoPib;
+        int resultadoPontosTuristicos;
+        int resultadoDensidadePopulacional;
 
-    float PibPercapta1, PibPercapta2; 
+    printf("escolha o país\n");
+    printf("1. Brasil");
+    printf("2. Argentina");
+
+    switch (pais)
+    {
+    case 1:
+    printf("Escolha seu atributo\n");
+      printf("1. População: %d\n", populacao1 );
+      printf("2. Área:  %.2f km² \n", area1);
+      printf("3. PIB: R$ %.2f\n", pib1);
+      printf("4. Pontos Turísticos: %d", pontosturisticos1);
+      printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional1);
+      break;
+        default:
+    (printf("Tente novamente"));
+      break;
+
+      switch (atributo)
+      {
+      case 1:
+        if (resultadoPopulacao)
+        printf(" ")
+        break;
+      
+      default:
+        break;
+      }
+    }
+
+    printf("Escolha o atributo para comparação\n");
+    printf("1. população\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    print
+
+
+    switch (opcao)
+    {
+    case constant expression:
+      /* code */
+      break;
+    
+    default:
+      break;
+    }
 
     // Delcara variáveis de comparação de atributos das cartas.
 
@@ -38,75 +90,11 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     int resultadoPib;
     int resultadoPontosTuristicos;
     int resultadoDensidadePopulacional;
-    int resultadoPibPercapita;
-    int resultadoSuperPoder;    
+      
 
     // função printf para exibir o texto formatado entre aspas na tela e "/n" para adicionar uma nova linha ao fim da mensagem.
     
-    printf("Cadastro das Cartas\n"); 
-
-    printf("\nCarta 1: \n");
-         
-    printf("Digite uma letra de A a H referente ao estado: "); // função printf utilizada para exibir o texto formatado entre as aspas na tela.
-    scanf(" %c", &estado1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                             O valor lido será armazenado no endereço da variável de caractere chamada "estado1". */
-
-    printf("Digite o código da carta: "); // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%s", &codigocarta1);  /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                                  O valor lido será armazenado no endereço da variável de caractere chamada "codigocarta1". */
-
-    printf("Digite a Cidade: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%s", &cidade1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                            O valor lido será armazenado no endereço da variável de caractere chamada "cidade1". */
-
-    printf("Digite a população: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%lu", &populacao1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                               O valor lido será armazenado no endereço da variável inteira chamada "pupulacao1". */ 
-
-    printf("Digite a área em km²: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%f", &area1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                          O valor lido será armazenado no endereço da variável de ponto flutante chamada "area1". */
-
-    printf("Digite o PIB: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%f", &pib1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                         O valor lido será armazenado no endereço da variável de ponto flutuante chamada "pib1". */
-
-    printf("Digite o número do pontos turísticos: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%d", &pontosturisticos1); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                                      O valor lido será armazenado no endereço da variável inteira chamada "pontosturisticos1". */
-      
-     // função printf para exibir o texto formatado entre aspas na tela e "/n" para adicionar uma nova linha ao fim da mensagem.                              
-
-    printf("\nCarta 2: \n");
-
-    printf("Digite uma letra de A a H referente ao estado: ");  // função printf utilizada para exibir o texto que está formatado entre as aspas na tela.
-    scanf(" %c", &estado2);  /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                              O valor lido será armazenado no endereço da variável de caractere chamada "estado2". */ 
-
-    printf("Digite o código da carta: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%s", &codigocarta2);   /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                                  O valor lido será armazenado no endereço da variável de caractere chamada "codigocarta2". */
-
-    printf("Digite a Cidade: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%s", &cidade2);  /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                            O valor lido será armazenado no endereço da variável de caractere chamada "cidade2". */
-
-    printf("Digite a população: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%lu", &populacao2);  /* função scanf utilizada para fazer a leitura de dados formatados via teclado.  (entrada de dados)
-                                O valor lido será armazenado no endereço da variável inteira chamada "pupulacao2". */ 
-
-    printf("Digite a área em km²: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%f", &area2);  /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                           O valor lido será armazenado no endereço da variável de ponto flutante chamada "area2". */
-
-    printf("Digite o PIB: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%f", &pib2); /* função scanf utilizada para fazer a leitura de dados formatados via teclado. (entrada de dados)
-                         O valor lido será armazenado no endereço da variável de ponto flutuante chamada "pib2". */
-
-    printf("Digite o número do pontos turísticos: ");  // função printf utilizada para exibir o texto que está entre aspas na tela.
-    scanf("%d", &pontosturisticos2); /* função scanf utilizada para fazer a leitura de dados formatados via teclado.  (entrada de dados)
-                                      O valor lido será armazenado no endereço da variável inteira chamada "pontosturisticos2". */
-
+    
     // cálcula a densidadade populacional.
     
     DensidadePopulacional1 = populacao1 / area1;
@@ -268,7 +256,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     }
 
 
-      printf("\nAtributo: Super Poder:\n");
+      printf("\nAtributo: Super Poder:\n");    
       
     printf("carta 1 (%s): %f\n", cidade1, superPoderCarta1);
     printf("Carta 2 (%s): %f\n", cidade2, superPoderCarta2);
@@ -280,5 +268,6 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
      }
     
+
       return 0; // Fim do programa, indicando que o programa terminou com sucesso.
     }
