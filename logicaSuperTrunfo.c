@@ -57,77 +57,69 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     printf("Escolha o país\n");
     printf("1. Brasil\n");
-    scanf("%s", pais1);
     printf("2. Argentina\n");
-    scanf("%s", pais2);
     printf("3. sair do jogo\n");
     scanf("%d", &pais);
     
     switch (pais)
     {
     case 1:
-      printf("%s", pais1);
-      break;
-
-     case 2:
-     printf("Argentina");
-     break;
-    
-    default:
-    printf("Opção inválida. Tente novamente!");
-      break;
-    }
-
-    printf("=== Escolha seu atributo ===\n");
+      printf("= = Brasil = =\n");
+      printf("=== Escolha seu atributo ===\n");
       printf("1. População: %d\n", populacao1 );
       printf("2. Área:  %.2f km² \n", area1);
       printf("3. PIB: R$ %.2f\n", pib1);
-      printf("4. Pontos Turísticos: %d", pontosturisticos1);
+      printf("4. Pontos Turísticos: %d\n", pontosturisticos1);
       printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional1);
+      scanf("%d",atributo);
+
       break;
         default:
-    (printf("Tente novamente"));
-      break;
-    }
-      switch (resultado) {
-      
+        printf("Opção inválida. Tente novamente");
+      }
+        switch (atributo)
+        {
         case 1:
         if (resultadoPopulacao) {
-        printf("%s: população: %d", pais1, populacao1);
-        printf("%s: população: %d", pais2, populacao2);
-        printf(" Pais %s venceu!", pais1);
-      } else if (populacao1 , populacao2)
-      { printf("%s: população: %d", pais1, populacao1);
-        printf("%s: população: %d", pais2, populacao2);
-        printf(" Pais %s venceu!", pais2);
-        
-      } else {
-        printf("%s: população: %d", pais1, populacao1);
-        printf("%s: população: %d", pais2, populacao2);
-        printf("Empate!");
-      } break;
-       
-        
-      case 2:
-      if (resultadoArea)
-      {
-        printf("%s: Área: %.2f", pais1, area1);
-        printf("%s: Área: %.2f", pais2, area2);
-        printf("Pais %s venceu!", pais1);
-      } else if (area1 < area2)
-      {
-        printf("%s: Área: %.2f", pais1, area1);
-        printf("%s: Área: %.2f", pais2, area2);
-        printf("Pais %s venceu!", pais2);
-      } else {
-        printf("%s: Área: %.2f", pais1, area1);
-        printf("%s: Área: %.2f", pais2, area2);
-        printf("Empate!");
-      }
-        break;
-    }  
-       
-   
+          printf("%s: população: %d", pais1, populacao1);
+          printf("%s: população: %d", pais2, populacao2);
+          printf(" Pais %s venceu!", pais1);
+        } else if (populacao1 , populacao2)
+        { printf("%s: população: %d", pais1, populacao1);
+          printf("%s: população: %d", pais2, populacao2);
+          printf(" Pais %s venceu!", pais2);
+          
+        } else {
+          printf("%s: população: %d", pais1, populacao1);
+          printf("%s: população: %d", pais2, populacao2);
+          printf("Empate!");
+        }        
+        default:
+          break;
+        }
 
+        
+          
+         
+          
+        case 2:
+        if (resultadoArea)
+        {
+          printf("%s: Área: %.2f", pais1, area1);
+          printf("%s: Área: %.2f", pais2, area2);
+          printf("Pais %s venceu!", pais1);
+        } else if (area1 < area2)
+        {
+          printf("%s: Área: %.2f", pais1, area1);
+          printf("%s: Área: %.2f", pais2, area2);
+          printf("Pais %s venceu!", pais2);
+        } else {
+          printf("%s: Área: %.2f", pais1, area1);
+          printf("%s: Área: %.2f", pais2, area2);
+          printf("Empate!");
+        }
+          break;
+      }  
+      }
       return 0; // Fim do programa, indicando que o programa terminou com sucesso.
     }
