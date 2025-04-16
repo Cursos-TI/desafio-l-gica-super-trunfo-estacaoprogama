@@ -2,8 +2,8 @@
 
 int main() {  // função principal, necessária para iniciar a execução do programa
 
-    char pais1 = "Brasil";
-    char pais2 = "Argentina";
+    char pais1; 
+    char pais2; 
    
     /* Declara 4 variáveis inteiras chamada: "populacao1", "populacao2", "pontosturisticos1", "pontosturisticos2", respectivamente para a identificação
     de população e pontos turísticos com números inteiros. */
@@ -25,6 +25,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     // Declara variavel para cálculo da densidade populacional.
 
     float DensidadePopulacional1, DensidadePopulacional2;
+    int pais;
     int resultado;
     int atributo;
         // Delcara variáveis de comparação de atributos das cartas.
@@ -54,13 +55,29 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     resultadoDensidadePopulacional = DensidadePopulacional1 < DensidadePopulacional2;
 
 
-    printf("escolha o país\n");
-    printf("1. Brasil");
-    printf("2. Argentina");
-
-    switch (atributo)
+    printf("Escolha o país\n");
+    printf("1. Brasil\n");
+    scanf("%s", pais1);
+    printf("2. Argentina\n");
+    scanf("%s", pais2);
+    printf("3. sair do jogo\n");
+    scanf("%d", &pais);
+    
+    switch (pais)
     {
     case 1:
+      printf("%s", pais1);
+      break;
+
+     case 2:
+     printf("Argentina");
+     break;
+    
+    default:
+    printf("Opção inválida. Tente novamente!");
+      break;
+    }
+
     printf("=== Escolha seu atributo ===\n");
       printf("1. População: %d\n", populacao1 );
       printf("2. Área:  %.2f km² \n", area1);
@@ -71,15 +88,15 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         default:
     (printf("Tente novamente"));
       break;
-
-      switch (resultado)
-      {
-      case 1:
+    }
+      switch (resultado) {
+      
+        case 1:
         if (resultadoPopulacao) {
         printf("%s: população: %d", pais1, populacao1);
         printf("%s: população: %d", pais2, populacao2);
         printf(" Pais %s venceu!", pais1);
-      } else if
+      } else if (populacao1 , populacao2)
       { printf("%s: população: %d", pais1, populacao1);
         printf("%s: população: %d", pais2, populacao2);
         printf(" Pais %s venceu!", pais2);
@@ -88,16 +105,16 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         printf("%s: população: %d", pais1, populacao1);
         printf("%s: população: %d", pais2, populacao2);
         printf("Empate!");
-      }
-      } 
-        break;
+      } break;
+       
+        
       case 2:
       if (resultadoArea)
       {
         printf("%s: Área: %.2f", pais1, area1);
         printf("%s: Área: %.2f", pais2, area2);
         printf("Pais %s venceu!", pais1);
-      } else if 
+      } else if (area1 < area2)
       {
         printf("%s: Área: %.2f", pais1, area1);
         printf("%s: Área: %.2f", pais2, area2);
@@ -107,9 +124,8 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         printf("%s: Área: %.2f", pais2, area2);
         printf("Empate!");
       }
-   
-      default:
         break;
+    }  
        
    
 
