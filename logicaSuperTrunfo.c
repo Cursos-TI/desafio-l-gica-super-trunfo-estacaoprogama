@@ -34,7 +34,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         int resultadoArea;
         int resultadoPib;
         int resultadoPontosTuristicos;
-        int resultadoDensidadePopulacional;
+        int resultadoDensidadePopulacional;    
 
             // cálcula a densidadade populacional.
     
@@ -64,19 +64,20 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     switch (pais)
     {
     case 1:
-      printf("= = Brasil = =\n");
-      printf("=== Escolha seu atributo ===\n");
+    printf("= = Brasil = =\n");
+      printf("=== Escolha seu atributo === \n");
+      
       printf("1. População: %d\n", populacao1 );
       printf("2. Área:  %.2f km² \n", area1);
       printf("3. PIB: R$ %.2f\n", pib1);
       printf("4. Pontos Turísticos: %d\n", pontosturisticos1);
       printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional1);
-      scanf("%d",atributo);
+      scanf("%d", &atributo);
 
       break;
         default:
         printf("Opção inválida. Tente novamente");
-      }
+      
         switch (atributo)
         {
         case 1:
@@ -84,7 +85,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("%s: população: %d", pais1, populacao1);
           printf("%s: população: %d", pais2, populacao2);
           printf(" Pais %s venceu!", pais1);
-        } else if (populacao1 , populacao2)
+        } else if (populacao1 < populacao2)
         { printf("%s: população: %d", pais1, populacao1);
           printf("%s: população: %d", pais2, populacao2);
           printf(" Pais %s venceu!", pais2);
@@ -94,17 +95,12 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("%s: população: %d", pais2, populacao2);
           printf("Empate!");
         }        
-        default:
-          break;
-        }
-
-        
-          
-         
-          
+        break;              
+                 
         case 2:
-        if (resultadoArea)
-        {
+
+        if (resultadoArea) {
+
           printf("%s: Área: %.2f", pais1, area1);
           printf("%s: Área: %.2f", pais2, area2);
           printf("Pais %s venceu!", pais1);
@@ -119,7 +115,63 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("Empate!");
         }
           break;
+
+          case 3:
+
+          if (resultadoPib) {
+
+            printf("%s: PIB: R$ %.2f", pais1, pib1);
+            printf("%s: PIB: R$ %.2f", pais2, pib2);
+            printf("Pais %s venceu!", pais1);
+          } else if (pib1 < pib2)
+          {
+            printf("%s: PIB: R$ %.2f", pais1, pib1);
+            printf("%s: PIB: R$ %.2f", pais2, pib2);
+            printf("Pais %s venceu!", pais2);
+          } else {
+            printf("%s: PIB: R$ %.2f", pais1, pib1);
+            printf("%s: PIB: R$ %.2f", pais2, pib2);
+            printf("Empate!");
+          }
+          break;
+
+          case 4:
+
+          if (resultadoPontosTuristicos) {
+            printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
+            printf("%s: Pontos Turísticos: %d", pais2, pontosturisticos2);
+            printf(" Pais %s venceu!", pais1);
+          } else if (pontosturisticos1 < pontosturisticos2)
+          { printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
+            printf("%s: Pontos Turísticos:: %d", pais2, pontosturisticos2);
+            printf(" Pais %s venceu!", pais2);
+            
+          } else {
+            printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
+            printf("%s: Pontos Turísticos: %d", pais2, pontosturisticos2);
+            printf("Empate!");
+          }        
+          break;    
+          
+          case 5:
+
+          if (resultadoDensidadePopulacional) {
+
+            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
+            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
+            printf("Pais %s venceu!", pais1);
+          } else if (DensidadePopulacional1 > DensidadePopulacional2)
+          {
+            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
+            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
+            printf("Pais %s venceu!", pais2);
+          } else {
+            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
+            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
+            printf("Empate!");
+          }
+            break;
       }  
-      }
+    }
       return 0; // Fim do programa, indicando que o programa terminou com sucesso.
     }
