@@ -82,10 +82,10 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     {
     case 1:
 
-      printf("= = %s = =\n", pais1);
-      printf("=== Escolha seu atributo === \n");
+      printf("\n= = %s = =\n", pais1);
+      printf("\n=== Escolha seu atributo === \n");
       
-      printf("1. População: %d\n", populacao1 );
+      printf("\n1. População: %d\n", populacao1 );
       printf("2. Área:  %.2f km² \n", area1);
       printf("3. PIB: R$ %.2f\n", pib1);
       printf("4. Pontos Turísticos: %d\n", pontosturisticos1);
@@ -195,8 +195,8 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
         case 2:
 
-            printf("= = %s = =\n", pais2);
-            printf("=== Escolha seu atributo === \n");
+            printf("\n= = %s = =\n", pais2);
+            printf("\n=== Escolha seu atributo === \n");
       
             printf("1. População: %d\n", populacao2 );
             printf("2. Área:  %.2f km² \n", area2);
@@ -317,6 +317,8 @@ int main() {  // função principal, necessária para iniciar a execução do pr
            case 3:
 
          printf("saindo do jogo!\n");
+
+         break;
 
     }
       return 0; // Fim do programa, indicando que o programa terminou com sucesso.
