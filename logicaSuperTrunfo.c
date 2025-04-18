@@ -1,7 +1,7 @@
 #include <stdio.h> // incluindo a biblioteca padão de entrada e saída para uso do printf
 
 int main() {  // função principal, necessária para iniciar a execução do programa
-
+// declara as variáveis tipo char 
     char pais1[30] = "Brasil";
     char pais2[30] = "Argentina";
    
@@ -27,10 +27,13 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     float DensidadePopulacional1, DensidadePopulacional2;
 
+    // declara  variáveis do tipo inteiro que serão utilizadas como valor na expressao do switch 
+
     int pais;
     int resultado;
     int atributo1;
     int atributo2;
+
         // Delcara variáveis de comparação de atributos das cartas.
 
         int resultadoPopulacao;
@@ -41,7 +44,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
 
 
-    // cálcula a densidadade populacional.
+    // calcula as variávies utilizando operadores matemáticas e operadores relacionais 
     
     DensidadePopulacional1 = populacao1 / area1;
 
@@ -57,6 +60,9 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
     resultadoDensidadePopulacional = DensidadePopulacional1 < DensidadePopulacional2;
 
+    // inaugura o menu do jogo
+    //printf - realiza a impressão na tela
+    // scanf - aloca o valor na variável declarada 
    
     printf("Escolha o país\n");
     printf("1. %s\n", pais1);
@@ -64,7 +70,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
     printf("3. sair do jogo\n");
     scanf("%d", &pais);
 
-    if ((pais == 1) || (pais == 2) )
+    if ((pais == 1) || (pais == 2) ) // utilização das estruturas condicionais  else-if
     {
       printf("Boa Sorte!  ^-^\n");
 
@@ -77,10 +83,16 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("Opção inválida. Digite 1 ou 2 ou 3!\n");
     }
 
-    switch (pais)
+    /* switch - estrutura  para recepcionar o valor da expressão - variável pais;
+       Case -  condição para que o código seja executado, caso seu valor coincida como valor da expressão;
+       break - interrompe a execução da instrução switch e sai do bloco; 
+       default - Somente será executado caso nenhum valor da expressão avaliada no switch corresponda a nenhum dos casos, */
+
+    switch (pais) 
 
     {
-    case 1:
+    case 1: 
+    //printf realizam a impressão na tela
 
       printf("\n= = %s = =\n", pais1);
       printf("\n=== Escolha seu atributo === \n");
@@ -90,7 +102,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("3. PIB: R$ %.2f\n", pib1);
       printf("4. Pontos Turísticos: %d\n", pontosturisticos1);
       printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional1);
-      scanf("%d", &atributo1);
+      scanf("%d", &atributo1); // aloca o valor na variável (tributo1)
 
           
         switch (atributo1)
@@ -100,7 +112,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("%s: população: %d\n", pais2, populacao2);
       
       
-          if (resultadoPopulacao) {
+          if (resultadoPopulacao) { // utilização das estruturas condicionais  else-if
 
           printf(" Pais %s venceu!\n", pais1);
 
@@ -119,7 +131,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         printf("%s: Área: %.2f\n", pais1, area1);
         printf("%s: Área: %.2f\n", pais2, area2);
 
-        if (resultadoArea) {
+        if (resultadoArea) { // utilização das estruturas condicionais  else-if
 
           printf("Pais %s venceu!\n", pais1);
 
@@ -137,7 +149,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("%s: PIB: R$ %.2f\n", pais1, pib1);
           printf("%s: PIB: R$ %.2f\n", pais2, pib2);
 
-          if (resultadoPib) {
+          if (resultadoPib) { // utilização das estruturas condicionais  else-if
 
             printf("Pais %s venceu!\n", pais1);
 
@@ -154,7 +166,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
             printf("%s: Pontos Turísticos: %d\n", pais1, pontosturisticos1);
             printf("%s: Pontos Turísticos: %d\n", pais2, pontosturisticos2);
 
-          if (resultadoPontosTuristicos) {
+          if (resultadoPontosTuristicos) { // utilização das estruturas condicionais  else-if
           
             printf(" Pais %s venceu!\n", pais1);
 
@@ -171,8 +183,8 @@ int main() {  // função principal, necessária para iniciar a execução do pr
           printf("%s: Densidade Populacional: %.2f\n", pais1, DensidadePopulacional1);
           printf("%s: Densidade Populacional: %.2f\n", pais2, DensidadePopulacional2);
 
-          if (resultadoDensidadePopulacional) {
-
+          if (resultadoDensidadePopulacional) {  // utilização das estruturas condicionais  else-if
+ 
             printf("Pais %s venceu!\n", pais1);
 
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
