@@ -35,7 +35,10 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         int resultadoArea;
         int resultadoPib;
         int resultadoPontosTuristicos;
-        int resultadoDensidadePopulacional;    
+        int resultadoDensidadePopulacional;  
+
+        pais1 = 'Brasil';
+        pais2 = 'Argentina';
 
             // cálcula a densidadade populacional.
     
@@ -100,79 +103,78 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         break;              
                  
         case 2:
+        printf("%s: Área: %.2f", pais1, area1);
+        printf("%s: Área: %.2f", pais2, area2);
 
         if (resultadoArea) {
 
-          printf("%s: Área: %.2f", pais1, area1);
-          printf("%s: Área: %.2f", pais2, area2);
           printf("Pais %s venceu!", pais1);
+
         } else if (area1 < area2)
         {
-          printf("%s: Área: %.2f", pais1, area1);
-          printf("%s: Área: %.2f", pais2, area2);
+          
           printf("Pais %s venceu!", pais2);
         } else {
-          printf("%s: Área: %.2f", pais1, area1);
-          printf("%s: Área: %.2f", pais2, area2);
+        
           printf("Empate!");
         }
           break;
 
           case 3:
+          printf("%s: PIB: R$ %.2f", pais1, pib1);
+          printf("%s: PIB: R$ %.2f", pais2, pib2);
 
           if (resultadoPib) {
 
-            printf("%s: PIB: R$ %.2f", pais1, pib1);
-            printf("%s: PIB: R$ %.2f", pais2, pib2);
             printf("Pais %s venceu!", pais1);
+
           } else if (pib1 < pib2)
           {
-            printf("%s: PIB: R$ %.2f", pais1, pib1);
-            printf("%s: PIB: R$ %.2f", pais2, pib2);
             printf("Pais %s venceu!", pais2);
+
           } else {
-            printf("%s: PIB: R$ %.2f", pais1, pib1);
-            printf("%s: PIB: R$ %.2f", pais2, pib2);
             printf("Empate!");
           }
           break;
 
           case 4:
+            printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
+            printf("%s: Pontos Turísticos: %d", pais2, pontosturisticos2);
 
           if (resultadoPontosTuristicos) {
-            printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
-            printf("%s: Pontos Turísticos: %d", pais2, pontosturisticos2);
+          
             printf(" Pais %s venceu!", pais1);
+
           } else if (pontosturisticos1 < pontosturisticos2)
-          { printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
-            printf("%s: Pontos Turísticos:: %d", pais2, pontosturisticos2);
-            printf(" Pais %s venceu!", pais2);
+          { printf(" Pais %s venceu!", pais2);
             
           } else {
-            printf("%s: Pontos Turísticos: %d", pais1, pontosturisticos1);
-            printf("%s: Pontos Turísticos: %d", pais2, pontosturisticos2);
             printf("Empate!");
           }        
           break;    
           
           case 5:
 
+          printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
+          printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
+
           if (resultadoDensidadePopulacional) {
 
-            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
-            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
             printf("Pais %s venceu!", pais1);
+
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
           {
-            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
-            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
             printf("Pais %s venceu!", pais2);
+
           } else {
-            printf("%s: Densidade Populacional: %.2f", pais1, DensidadePopulacional1);
-            printf("%s: Densidade Populacional: %.2f", pais2, DensidadePopulacional2);
+          
             printf("Empate!");
           }
-            break;            
+            break;  
+            
+            default:
+
+            printf("Opção inválida. Tente novamente!!!\n");
          }  
 
         case 2:
