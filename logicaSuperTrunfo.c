@@ -45,6 +45,9 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         int resultadoPontosTuristicos;
         int resultadoDensidadePopulacional;  
 
+        int pontoCarta1;
+        int pontoCarta2;
+
 
 
     // calcula as variávies utilizando operadores matemáticas e operadores relacionais 
@@ -96,92 +99,120 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         switch (atributo1)
         {
         case 1:
-          printf("%s: população: %d\n", pais1, populacao1);
-          printf("%s: população: %d\n", pais2, populacao2);
+          printf("%s: população: %d - Pontos: %d\n", pais1, populacao1, pontoCarta1);
+          printf("%s: população: %d - Pontos: %d\n", pais2, populacao2, pontoCarta2);
       
       
           if (resultadoPopulacao) { // utilização das estruturas condicionais  else-if
 
           printf(" Pais %s venceu!\n", pais1);
 
+          pontoCarta1 = resultadoPopulacao ? 1 : 0;
+
         } else if (populacao1 < populacao2)
         { 
           printf(" Pais %s venceu!\n", pais2);
+          pontoCarta2 = populacao1 < populacao2 ? 1 : 0;
           
         } else {
 
           printf("Empate!\n");
+
+          pontoCarta1 = populacao1 == populacao2 ? 0 : 0;
+          pontoCarta1 = populacao1 == populacao2 ? 0 : 0;
+          
         }        
         break;              
                  
         case 2:
 
-        printf("%s: Área: %.2f\n", pais1, area1);
-        printf("%s: Área: %.2f\n", pais2, area2);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais1, area1, pontoCarta1);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais2, area2, pontoCarta2);
 
         if (resultadoArea) { // utilização das estruturas condicionais  else-if
 
           printf("Pais %s venceu!\n", pais1);
+          pontoCarta1 = resultadoArea ? 1 : 0;
 
         } else if (area1 < area2)
         {
-          
           printf("Pais %s venceu!\n", pais2);
+          pontoCarta2 = area1 < area2 ? 1 : 0;
         } else {
         
           printf("Empate!\n");
+
+          pontoCarta1 = area1 == area2 ? 0 : 0;
+          pontoCarta2 = area1 == area2 ? 0 : 0;
+         
         }
           break;
 
           case 3:
-          printf("%s: PIB: R$ %.2f\n", pais1, pib1);
-          printf("%s: PIB: R$ %.2f\n", pais2, pib2);
+          printf("%s: PIB: R$ %.2f- Pontos: %d\n", pais1, pib1, pontoCarta1);
+          printf("%s: PIB: R$ %.2f -Pontos: %d\n", pais2, pib2, pontoCarta2);
 
           if (resultadoPib) { // utilização das estruturas condicionais  else-if
 
             printf("Pais %s venceu!\n", pais1);
 
+            pontoCarta1 = resultadoPib ? 1 : 0;
+
           } else if (pib1 < pib2)
           {
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = pib1 < pib2 ? 1 : 0;
 
           } else {
             printf("Empate!\n");
+          
+            pontoCarta1 = pib1 == pib2 ? 0 : 0;
+            pontoCarta2 = pib1 == pib2 ? 0 : 0;
+
           }
           break;
 
           case 4:
-            printf("%s: Pontos Turísticos: %d\n", pais1, pontosturisticos1);
-            printf("%s: Pontos Turísticos: %d\n", pais2, pontosturisticos2);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais1, pontosturisticos1, pontoCarta1);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais2, pontosturisticos2, pontoCarta2);
 
           if (resultadoPontosTuristicos) { // utilização das estruturas condicionais  else-if
           
             printf(" Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoPontosTuristicos ? 1 : 0;
 
           } else if (pontosturisticos1 < pontosturisticos2)
           { printf(" Pais %s venceu!\n", pais2);
+            pontoCarta2 = pontosturisticos1 < pontosturisticos2 ? 1 : 0;
             
           } else {
             printf("Empate!\n");
+            pontoCarta1 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+            pontoCarta2 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+                       
           }        
           break;    
           
           case 5:
 
-          printf("%s: Densidade Populacional: %.2f\n", pais1, DensidadePopulacional1);
-          printf("%s: Densidade Populacional: %.2f\n", pais2, DensidadePopulacional2);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais1, DensidadePopulacional1, pontoCarta1);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais2, DensidadePopulacional2, pontoCarta2);
 
           if (resultadoDensidadePopulacional) {  // utilização das estruturas condicionais  else-if
  
             printf("Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoDensidadePopulacional ? 0 : 1;
 
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
           {
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = DensidadePopulacional1 > DensidadePopulacional2 ? 1 : 0;
 
           } else {
           
             printf("Empate!\n");
+            pontoCarta1 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
+            pontoCarta2 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
           }
             break;  
             
@@ -210,100 +241,120 @@ int main() {  // função principal, necessária para iniciar a execução do pr
         {
        
           case 1:
-
-        printf("%s: população: %d\n", pais1, populacao1);
-        printf("%s: população: %d\n", pais2, populacao2);
-
-        if (resultadoPopulacao) {
+          printf("%s: população: %d - Pontos: %d\n", pais1, populacao1, pontoCarta1);
+          printf("%s: população: %d - Pontos: %d\n", pais2, populacao2, pontoCarta2);
+      
+      
+          if (resultadoPopulacao) { // utilização das estruturas condicionais  else-if
 
           printf(" Pais %s venceu!\n", pais1);
+
+          pontoCarta1 = resultadoPopulacao ? 1 : 0;
 
         } else if (populacao1 < populacao2)
         { 
           printf(" Pais %s venceu!\n", pais2);
+          pontoCarta2 = populacao1 < populacao2 ? 1 : 0;
           
         } else {
-         
+
           printf("Empate!\n");
+
+          pontoCarta1 = populacao1 == populacao2 ? 0 : 0;
+          pontoCarta2 = populacao1 == populacao2 ? 0 : 0;
+          
         }        
         break;              
                  
         case 2:
 
-        if (resultadoArea) {
+        printf("%s: Área: %.2f - Pontos: %d\n", pais1, area1, pontoCarta1);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais2, area2, pontoCarta2);
 
-          printf("%s: Área: %.2f\n", pais1, area1);
-          printf("%s: Área: %.2f\n", pais2, area2); 
-         
+        if (resultadoArea) { // utilização das estruturas condicionais  else-if
+
           printf("Pais %s venceu!\n", pais1);
+          pontoCarta1 = resultadoArea ? 1 : 0;
 
         } else if (area1 < area2)
         {
-                    
           printf("Pais %s venceu!\n", pais2);
-
+          pontoCarta2 = area1 < area2 ? 1 : 0;
         } else {
-         
+        
           printf("Empate!\n");
+
+          pontoCarta1 = area1 == area2 ? 0 : 0;
+          pontoCarta2 = area1 == area2 ? 0 : 0;
+         
         }
           break;
 
           case 3:
+          printf("%s: PIB: R$ %.2f- Pontos: %d\n", pais1, pib1, pontoCarta1);
+          printf("%s: PIB: R$ %.2f -Pontos: %d\n", pais2, pib2, pontoCarta2);
 
-          printf("%s: PIB: R$ %.2f\n", pais1, pib1);
-          printf("%s: PIB: R$ %.2f\n", pais2, pib2);
+          if (resultadoPib) { // utilização das estruturas condicionais  else-if
 
-          if (resultadoPib) {
-            
             printf("Pais %s venceu!\n", pais1);
+
+            pontoCarta1 = resultadoPib ? 1 : 0;
 
           } else if (pib1 < pib2)
           {
-           
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = pib1 < pib2 ? 1 : 0;
 
           } else {
-            
             printf("Empate!\n");
+          
+            pontoCarta1 = pib1 == pib2 ? 0 : 0;
+            pontoCarta2 = pib1 == pib2 ? 0 : 0;
+
           }
           break;
 
           case 4:
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais1, pontosturisticos1, pontoCarta1);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais2, pontosturisticos2, pontoCarta2);
 
-          printf("%s: Pontos Turísticos: %d\n", pais1, pontosturisticos1);
-          printf("%s: Pontos Turísticos: %d\n", pais2, pontosturisticos2);  
-
-          if (resultadoPontosTuristicos) {
-            
+          if (resultadoPontosTuristicos) { // utilização das estruturas condicionais  else-if
+          
             printf(" Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoPontosTuristicos ? 1 : 0;
 
           } else if (pontosturisticos1 < pontosturisticos2)
-          {
-            printf(" Pais %s venceu!\n", pais2);
+          { printf(" Pais %s venceu!\n", pais2);
+            pontoCarta2 = pontosturisticos1 < pontosturisticos2 ? 1 : 0;
             
           } else {
-            
             printf("Empate!\n");
+            pontoCarta1 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+            pontoCarta2 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+                       
           }        
           break;    
           
           case 5:
 
-          printf("%s: Densidade Populacional: %.2f\n", pais1, DensidadePopulacional1);
-          printf("%s: Densidade Populacional: %.2f\n", pais2, DensidadePopulacional2);  
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais1, DensidadePopulacional1, pontoCarta1);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais2, DensidadePopulacional2, pontoCarta2);
 
-          if (resultadoDensidadePopulacional) {
-                      
+          if (resultadoDensidadePopulacional) {  // utilização das estruturas condicionais  else-if
+ 
             printf("Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoDensidadePopulacional ? 0 : 1;
 
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
           {
-            
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = DensidadePopulacional1 > DensidadePopulacional2 ? 1 : 0;
 
           } else {
-            
+          
             printf("Empate!\n");
+            pontoCarta1 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
+            pontoCarta2 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
           }
             break;  
             
@@ -356,96 +407,131 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional1);
       scanf("%d", &atributo3); // aloca o valor na variável (tributo1)
 
-          
-        switch (atributo3)
+      if (atributo3 == atributo1)
+
+      { printf("\nEscolha outro atributo!!\n");
+        
+      } else
+      {
+
+     
+      switch (atributo3)
         {
-        case 1:
-          printf("%s: população: %d\n", pais1, populacao1);
-          printf("%s: população: %d\n", pais2, populacao2);
+          case 1:
+          printf("%s: população: %d - Pontos: %d\n", pais1, populacao1, pontoCarta1);
+          printf("%s: população: %d - Pontos: %d\n", pais2, populacao2, pontoCarta2);
       
       
           if (resultadoPopulacao) { // utilização das estruturas condicionais  else-if
 
           printf(" Pais %s venceu!\n", pais1);
 
+          pontoCarta1 = resultadoPopulacao ? 1 : 0;
+
         } else if (populacao1 < populacao2)
         { 
           printf(" Pais %s venceu!\n", pais2);
+          pontoCarta2 = populacao1 < populacao2 ? 1 : 0;
           
         } else {
 
           printf("Empate!\n");
+
+          pontoCarta1 = populacao1 == populacao2 ? 0 : 0;
+          pontoCarta2 = populacao1 == populacao2 ? 0 : 0;
+          
         }        
         break;              
                  
         case 2:
 
-        printf("%s: Área: %.2f\n", pais1, area1);
-        printf("%s: Área: %.2f\n", pais2, area2);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais1, area1, pontoCarta1);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais2, area2, pontoCarta2);
 
         if (resultadoArea) { // utilização das estruturas condicionais  else-if
 
           printf("Pais %s venceu!\n", pais1);
+          pontoCarta1 = resultadoArea ? 1 : 0;
 
         } else if (area1 < area2)
         {
-          
           printf("Pais %s venceu!\n", pais2);
+          pontoCarta2 = area1 < area2 ? 1 : 0;
         } else {
         
           printf("Empate!\n");
+
+          pontoCarta1 = area1 == area2 ? 0 : 0;
+          pontoCarta2 = area1 == area2 ? 0 : 0;
+         
         }
           break;
 
           case 3:
-          printf("%s: PIB: R$ %.2f\n", pais1, pib1);
-          printf("%s: PIB: R$ %.2f\n", pais2, pib2);
+          printf("%s: PIB: R$ %.2f- Pontos: %d\n", pais1, pib1, pontoCarta1);
+          printf("%s: PIB: R$ %.2f -Pontos: %d\n", pais2, pib2, pontoCarta2);
 
           if (resultadoPib) { // utilização das estruturas condicionais  else-if
 
             printf("Pais %s venceu!\n", pais1);
 
+            pontoCarta1 = resultadoPib ? 1 : 0;
+
           } else if (pib1 < pib2)
           {
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = pib1 < pib2 ? 1 : 0;
 
           } else {
             printf("Empate!\n");
+          
+            pontoCarta1 = pib1 == pib2 ? 0 : 0;
+            pontoCarta2 = pib1 == pib2 ? 0 : 0;
+
           }
           break;
 
           case 4:
-            printf("%s: Pontos Turísticos: %d\n", pais1, pontosturisticos1);
-            printf("%s: Pontos Turísticos: %d\n", pais2, pontosturisticos2);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais1, pontosturisticos1, pontoCarta1);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais2, pontosturisticos2, pontoCarta2);
 
           if (resultadoPontosTuristicos) { // utilização das estruturas condicionais  else-if
           
             printf(" Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoPontosTuristicos ? 1 : 0;
 
           } else if (pontosturisticos1 < pontosturisticos2)
           { printf(" Pais %s venceu!\n", pais2);
+            pontoCarta2 = pontosturisticos1 < pontosturisticos2 ? 1 : 0;
             
           } else {
             printf("Empate!\n");
+            pontoCarta1 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+            pontoCarta2 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+                       
           }        
           break;    
           
           case 5:
 
-          printf("%s: Densidade Populacional: %.2f\n", pais1, DensidadePopulacional1);
-          printf("%s: Densidade Populacional: %.2f\n", pais2, DensidadePopulacional2);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais1, DensidadePopulacional1, pontoCarta1);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais2, DensidadePopulacional2, pontoCarta2);
 
           if (resultadoDensidadePopulacional) {  // utilização das estruturas condicionais  else-if
  
             printf("Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoDensidadePopulacional ? 0 : 1;
 
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
           {
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = DensidadePopulacional1 > DensidadePopulacional2 ? 1 : 0;
 
           } else {
           
             printf("Empate!\n");
+            pontoCarta1 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
+            pontoCarta2 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
           }
             break;  
             
@@ -453,7 +539,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
 
             printf("Opção inválida. Tente novamente!!!\n");
            
-         }  
+         } } 
 
          break;
 
@@ -469,105 +555,131 @@ int main() {  // função principal, necessária para iniciar a execução do pr
             printf("5. Densidade Populacional: %.2f hab/km²\n", DensidadePopulacional2);
             scanf("%d", &atributo4);
 
+            if (atributo4 == atributo2)
+            {
+              printf("\nVocê deve escolher um atributo diferente da opção anterior\n");
+            }
+   else {         
+
             
         switch (atributo4)
         {
        
           case 1:
-
-        printf("%s: população: %d\n", pais1, populacao1);
-        printf("%s: população: %d\n", pais2, populacao2);
-
-        if (resultadoPopulacao) {
+          printf("%s: população: %d - Pontos: %d\n", pais1, populacao1, pontoCarta1);
+          printf("%s: população: %d - Pontos: %d\n", pais2, populacao2, pontoCarta2);
+      
+      
+          if (resultadoPopulacao) { // utilização das estruturas condicionais  else-if
 
           printf(" Pais %s venceu!\n", pais1);
+
+          pontoCarta1 = resultadoPopulacao ? 1 : 0;
 
         } else if (populacao1 < populacao2)
         { 
           printf(" Pais %s venceu!\n", pais2);
+          pontoCarta2 = populacao1 < populacao2 ? 1 : 0;
           
         } else {
-         
+
           printf("Empate!\n");
+
+          pontoCarta1 = populacao1 == populacao2 ? 0 : 0;
+          pontoCarta2 = populacao1 == populacao2 ? 0 : 0;
+          
         }        
         break;              
                  
         case 2:
 
-        if (resultadoArea) {
+        printf("%s: Área: %.2f - Pontos: %d\n", pais1, area1, pontoCarta1);
+        printf("%s: Área: %.2f - Pontos: %d\n", pais2, area2, pontoCarta2);
 
-          printf("%s: Área: %.2f\n", pais1, area1);
-          printf("%s: Área: %.2f\n", pais2, area2); 
-         
+        if (resultadoArea) { // utilização das estruturas condicionais  else-if
+
           printf("Pais %s venceu!\n", pais1);
+          pontoCarta1 = resultadoArea ? 1 : 0;
 
         } else if (area1 < area2)
         {
-                    
           printf("Pais %s venceu!\n", pais2);
-
+          pontoCarta2 = area1 < area2 ? 1 : 0;
         } else {
-         
+        
           printf("Empate!\n");
+
+          pontoCarta1 = area1 == area2 ? 0 : 0;
+          pontoCarta2 = area1 == area2 ? 0 : 0;
+         
         }
           break;
 
           case 3:
+          printf("%s: PIB: R$ %.2f- Pontos: %d\n", pais1, pib1, pontoCarta1);
+          printf("%s: PIB: R$ %.2f -Pontos: %d\n", pais2, pib2, pontoCarta2);
 
-          printf("%s: PIB: R$ %.2f\n", pais1, pib1);
-          printf("%s: PIB: R$ %.2f\n", pais2, pib2);
+          if (resultadoPib) { // utilização das estruturas condicionais  else-if
 
-          if (resultadoPib) {
-            
             printf("Pais %s venceu!\n", pais1);
+
+            pontoCarta1 = resultadoPib ? 1 : 0;
 
           } else if (pib1 < pib2)
           {
-           
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = pib1 < pib2 ? 1 : 0;
 
           } else {
-            
             printf("Empate!\n");
+          
+            pontoCarta1 = pib1 == pib2 ? 0 : 0;
+            pontoCarta2 = pib1 == pib2 ? 0 : 0;
+
           }
           break;
 
           case 4:
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais1, pontosturisticos1, pontoCarta1);
+            printf("%s: Pontos Turísticos: %d- Pontos: %d\n", pais2, pontosturisticos2, pontoCarta2);
 
-          printf("%s: Pontos Turísticos: %d\n", pais1, pontosturisticos1);
-          printf("%s: Pontos Turísticos: %d\n", pais2, pontosturisticos2);  
-
-          if (resultadoPontosTuristicos) {
-            
+          if (resultadoPontosTuristicos) { // utilização das estruturas condicionais  else-if
+          
             printf(" Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoPontosTuristicos ? 1 : 0;
 
           } else if (pontosturisticos1 < pontosturisticos2)
-          {
-            printf(" Pais %s venceu!\n", pais2);
+          { printf(" Pais %s venceu!\n", pais2);
+            pontoCarta2 = pontosturisticos1 < pontosturisticos2 ? 1 : 0;
             
           } else {
-            
             printf("Empate!\n");
+            pontoCarta1 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+            pontoCarta2 = pontosturisticos1 == pontosturisticos2 ? 0 : 0;
+                       
           }        
           break;    
           
           case 5:
 
-          printf("%s: Densidade Populacional: %.2f\n", pais1, DensidadePopulacional1);
-          printf("%s: Densidade Populacional: %.2f\n", pais2, DensidadePopulacional2);  
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais1, DensidadePopulacional1, pontoCarta1);
+          printf("%s: Densidade Populacional: %.2f- Pontos: %d\n", pais2, DensidadePopulacional2, pontoCarta2);
 
-          if (resultadoDensidadePopulacional) {
-                      
+          if (resultadoDensidadePopulacional) {  // utilização das estruturas condicionais  else-if
+ 
             printf("Pais %s venceu!\n", pais1);
+            pontoCarta1 = resultadoDensidadePopulacional ? 0 : 1;
 
           } else if (DensidadePopulacional1 > DensidadePopulacional2)
           {
-            
             printf("Pais %s venceu!\n", pais2);
+            pontoCarta2 = DensidadePopulacional1 > DensidadePopulacional2 ? 1 : 0;
 
           } else {
-            
+          
             printf("Empate!\n");
+            pontoCarta1 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
+            pontoCarta2 = DensidadePopulacional1 == DensidadePopulacional2 ? 0 : 0;
           }
             break;  
             
@@ -577,7 +689,7 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       }  
 
       break;
-    } }  
+    } }  }
    else if (paisSegundaEscolha == 3) {
      switch (paisSegundaEscolha)
      {
@@ -593,6 +705,13 @@ int main() {  // função principal, necessária para iniciar a execução do pr
       printf("Opção inválida. Digite 1 ou 2 ou 3!\n");
     }
 
+  if (pontoCarta1 && pontoCarta2)
+  {
+    printf("Parabéns você ganhou");
 
+  } else if  (pontoCarta1 != pontoCarta2 ) {
+    printf("Empatou!\n");
+  } else { printf("Você PERDEU!\n"); }
+  
              return 0; // Fim do programa, indicando que o programa terminou com sucesso.
     } 
