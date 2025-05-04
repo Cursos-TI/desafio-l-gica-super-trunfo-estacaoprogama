@@ -27,7 +27,7 @@ int main() {
 
     // Escolha da primeira carta e seu atributo e a opçao de saída do jogo
 
-    printf("Escolha a primeira carta:\n");
+    printf("Escolha sua primeira carta:\n");
     printf("1. %s\n", pais1);
     printf("2. %s\n", pais2);
     printf("3. Sair do jogo...\n");
@@ -58,7 +58,7 @@ int main() {
 
     // Escolha da segunda carta e seu atributo
 
-    printf("\nEscolha a segunda carta:\n");
+    printf("\nEscolha sua segunda carta:\n");
     printf("1. %s\n", pais1);
     printf("2. %s\n", pais2);
     printf("Digite o número do país: ");
@@ -84,10 +84,11 @@ int main() {
     }
 
     printf("\n--- Resultado da Comparação ---\n");
-    printf("País 1: %s\n", (escolhaPais1 == 1) ? pais1 : pais2);
-    printf("País 2: %s\n", (escolhaPais2 == 1) ? pais1 : pais2);
+   
+   
+    printf("\n--- Comparando Atributo 1 ---\n\n");
+    printf("Você escolheu %s para esta comparação\n\n", (escolhaPais1 == 1) ? pais1 : pais2);
 
-    printf("\n--- Comparando Atributo 1 ---\n");
     switch (escolhaAtributo1) {
         case 1:
             printf("--- (População) ---\n");
@@ -158,8 +159,9 @@ int main() {
             printf("--- (Atributo Inválido) ---\n");
             break;
     }
-
-    printf("\n--- Comparando Atributo 2 ---\n");
+    
+    printf("\n--- Comparando Atributo 2 --- \n\n");
+    printf("Você escolheu %s para esta comparação\n\n", (escolhaPais2 == 1) ? pais1 : pais2);
     switch (escolhaAtributo2) {
         case 1:
             printf("--- (População) ---\n");
